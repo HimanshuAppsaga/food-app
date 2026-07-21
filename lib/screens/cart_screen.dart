@@ -74,7 +74,9 @@ class CartScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 70,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/checkout');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.brandOrange,
                     foregroundColor: Colors.white,

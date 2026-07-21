@@ -6,6 +6,11 @@ import 'screens/cart_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/history_screen.dart';
 import 'screens/product_detail_screen.dart';
+import 'screens/checkout_screen.dart';
+import 'screens/orders_screen.dart';
+import 'screens/offers_screen.dart';
+import 'screens/privacy_screen.dart';
+import 'screens/security_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -15,6 +20,11 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String history = '/history';
   static const String productDetail = '/product_detail';
+  static const String checkout = '/checkout';
+  static const String orders = '/orders';
+  static const String offers = '/offers';
+  static const String privacy = '/privacy';
+  static const String security = '/security';
 
   static final router = GoRouter(
     initialLocation: splash,
@@ -46,6 +56,26 @@ class AppRoutes {
       GoRoute(
         path: productDetail,
         builder: (context, state) => const ProductDetailScreen(),
+      ),
+      GoRoute(
+        path: checkout,
+        builder: (context, state) => const CheckoutScreen(),
+      ),
+      GoRoute(
+        path: orders,
+        builder: (context, state) => const OrdersScreen(),
+      ),
+      GoRoute(
+        path: offers,
+        builder: (context, state) => const OffersScreen(),
+      ),
+      GoRoute(
+        path: privacy,
+        builder: (context, state) => const PrivacyScreen(),
+      ),
+      GoRoute(
+        path: security,
+        builder: (context, state) => const SecurityScreen(),
       ),
     ],
   );
