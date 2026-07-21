@@ -11,6 +11,7 @@ import 'screens/orders_screen.dart';
 import 'screens/offers_screen.dart';
 import 'screens/privacy_screen.dart';
 import 'screens/security_screen.dart';
+import 'screens/payment_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -21,6 +22,7 @@ class AppRoutes {
   static const String history = '/history';
   static const String productDetail = '/product_detail';
   static const String checkout = '/checkout';
+  static const String payment = '/payment';
   static const String orders = '/orders';
   static const String offers = '/offers';
   static const String privacy = '/privacy';
@@ -76,6 +78,10 @@ class AppRoutes {
       GoRoute(
         path: security,
         builder: (context, state) => const SecurityScreen(),
+      ),
+      GoRoute(
+        path: payment,
+        builder: (context, state) => const PaymentScreen(),
       ),
     ],
   );

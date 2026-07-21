@@ -210,7 +210,9 @@ class CheckoutScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 70,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.push('/payment');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.brandOrange,
                         foregroundColor: Colors.white,
