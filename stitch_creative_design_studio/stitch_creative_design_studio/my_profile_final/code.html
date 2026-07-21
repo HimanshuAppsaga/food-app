@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>My Profile - Food Delivery App</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-styling">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F2F2F2;
+    }
+
+    /* Custom shadow for cards to match the reference look */
+    .profile-card-shadow {
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+    }
+
+    /* Radio button custom styling */
+    input[type="radio"]:checked {
+      background-image: radial-gradient(circle, #FA4A0C 35%, transparent 40%);
+      border-color: #FA4A0C;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+<!-- BEGIN: MobileDeviceContainer -->
+<main class="w-full max-w-[414px] bg-[#F2F2F2] rounded-[40px] shadow-2xl overflow-hidden min-h-[896px] flex flex-col relative" data-purpose="mobile-frame">
+<!-- BEGIN: HeaderSection -->
+<header class="pt-14 px-8 pb-8 flex items-center" data-purpose="app-bar">
+<!-- Back Arrow Icon -->
+<button aria-label="Go back" class="text-black">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Title -->
+<h1 class="flex-grow text-center text-lg font-semibold text-black mr-6">My profile</h1>
+</header>
+<!-- END: HeaderSection -->
+<div class="px-10 flex-grow">
+<!-- BEGIN: InformationSection -->
+<section class="mb-10" data-purpose="information-section">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-lg font-semibold text-black">Information</h2>
+<button class="text-[#FA4A0C] text-sm font-medium">change</button>
+</div>
+<div class="bg-white rounded-[20px] p-5 profile-card-shadow flex items-start gap-4" data-purpose="user-info-card">
+<!-- User Avatar Placeholder -->
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Marvis Ighedosa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpNZZ3jnwt7sSpx2YRb0o9uE34aCweHJmfmx3vgaq4aFyXzdQsKb2FGQV9jb5QALjVe-3wZ4BCgZYxbvcgrNXu2XOrCe-IF0kuLF7RVEPUvGpxq5hszzByZLjOOuuUzKwvBH2tWuHWB_ei6FMHMyBy6Zn9Iq4_A7wocfwmhvdYtQGLeYWUBzjyF42_eXL60lo1X68Azur9AUVeMK2lqGh7xcWtAUzeY44b2ed9IXUm2D55809ybgn0kPAnDjs3qOR4Q2BF7lsT22Zx">
+</div>
+<!-- User Details -->
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-semibold text-black leading-tight">Marvis Ighedosa</h3>
+<p class="text-[13px] text-gray-500 border-b border-gray-100 pb-2">dosamarvis@gmail.com</p>
+<p class="text-[13px] text-gray-500 pt-1 leading-snug">
+              No 15 uti street off ovie palace road effurun delta state
+            </p>
+</div>
+</div>
+</section>
+<!-- END: InformationSection -->
+<!-- BEGIN: PaymentMethodSection -->
+<section data-purpose="payment-section">
+<h2 class="text-lg font-semibold text-black mb-4">Payment Method</h2>
+<div class="bg-white rounded-[20px] p-5 profile-card-shadow" data-purpose="payment-options-container">
+<!-- Option: Card -->
+<label class="flex items-center gap-4 py-3 cursor-pointer border-b border-gray-100">
+<input checked="" class="w-5 h-5 text-[#FA4A0C] border-gray-300 focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio" value="card">
+<div class="w-10 h-10 bg-[#F47B0A] rounded-lg flex items-center justify-center text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-base font-medium text-black">Card</span>
+</label>
+<!-- Option: Bank Account -->
+<label class="flex items-center gap-4 py-4 cursor-pointer border-b border-gray-100">
+<input class="w-5 h-5 text-[#FA4A0C] border-gray-300 focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio" value="bank">
+<div class="w-10 h-10 bg-[#EB4796] rounded-lg flex items-center justify-center text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-base font-medium text-black">Bank account</span>
+</label>
+<!-- Option: Paypal -->
+<label class="flex items-center gap-4 py-3 cursor-pointer">
+<input class="w-5 h-5 text-[#FA4A0C] border-gray-300 focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio" value="paypal">
+<div class="w-10 h-10 bg-[#0038FF] rounded-lg flex items-center justify-center text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-base font-medium text-black">Paypal</span>
+</label>
+</div>
+</section>
+<!-- END: PaymentMethodSection -->
+</div>
+<!-- BEGIN: FooterAction -->
+<footer class="p-10" data-purpose="sticky-bottom-action">
+<button class="w-full bg-[#FA4A0C] text-white font-semibold py-5 rounded-[30px] text-lg hover:bg-[#e03d09] transition-colors active:scale-95 duration-200" id="update-profile-btn">
+        Updatet
+      </button>
+</footer>
+<!-- END: FooterAction -->
+</main>
+<!-- END: MobileDeviceContainer -->
+</body></html>

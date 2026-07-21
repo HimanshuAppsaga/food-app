@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food App Side Menu</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="typography">
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style data-purpose="layout-and-colors">
+    :root {
+      --primary-orange: #FF4B2B;
+    }
+    .bg-app-orange {
+      background-color: var(--primary-orange);
+    }
+    /* Creates the partial peek effect for the home screen */
+    .peek-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .peek-overlay {
+      position: absolute;
+      right: -60%; /* Offset to show only a portion of the inner screen */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 90%;
+      background-color: #F2F2F2;
+      border-radius: 40px;
+      box-shadow: -20px 0 50px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    /* Divider styling */
+    .menu-divider {
+      width: 130px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin-left: 44px;
+    }
+  </style>
+</head>
+<body class="bg-app-orange h-screen overflow-hidden text-white">
+<!-- BEGIN: MainContainer -->
+<main class="relative h-full w-full flex overflow-hidden">
+<!-- BEGIN: SidebarContent -->
+<div class="flex flex-col justify-between w-2/3 h-full pt-20 pb-12 pl-10 z-20" data-purpose="sidebar-navigation">
+<!-- BEGIN: NavigationItems -->
+<nav class="space-y-6">
+<!-- Profile -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="#">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+<span class="text-lg font-semibold">Profile</span>
+</a>
+<div class="menu-divider"></div>
+</div>
+<!-- Orders -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="#">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+<span class="text-lg font-semibold">orders</span>
+</a>
+<div class="menu-divider"></div>
+</div>
+<!-- Offer and Promo -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="#">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" x2="7.01" y1="7" y2="7"></line></svg>
+<span class="text-lg font-semibold">offer and promo</span>
+</a>
+<div class="menu-divider"></div>
+</div>
+<!-- Privacy Policy -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="#">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+<span class="text-lg font-semibold">Privacy policy</span>
+</a>
+<div class="menu-divider"></div>
+</div>
+<!-- Security -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="#">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+<span class="text-lg font-semibold">Security</span>
+</a>
+</div>
+</nav>
+<!-- END: NavigationItems -->
+<!-- BEGIN: SignOut -->
+<button class="flex items-center gap-3 text-lg font-semibold mt-auto group" data-purpose="sign-out-button">
+<span>Sign-out</span>
+<svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</button>
+<!-- END: SignOut -->
+</div>
+<!-- END: SidebarContent -->
+<!-- BEGIN: HomePeek -->
+<!-- This div simulates the screen that is currently being "pushed" to the side -->
+<div class="peek-overlay p-8 flex flex-col">
+<!-- Top Nav in peek -->
+<div class="mb-8">
+<svg fill="none" height="28" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="12" y1="18" y2="18"></line></svg>
+</div>
+<h1 class="text-black text-3xl font-bold leading-tight mb-8">Delicious<br/>food for you</h1>
+<!-- Search Bar -->
+<div class="relative mb-10">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<input class="w-full bg-gray-200 border-none rounded-full py-3 pl-12 text-sm focus:ring-0" placeholder="Search" type="text"/>
+</div>
+<!-- Categories -->
+<div class="flex gap-8 mb-12 border-b border-transparent">
+<div class="flex flex-col items-center">
+<span class="text-[#FA4A0C] font-semibold pb-2 border-b-2 border-[#FA4A0C]">Foods</span>
+</div>
+<span class="text-gray-400 font-semibold">Drinks</span>
+</div>
+<!-- Food Card Placeholder -->
+<div class="relative bg-white rounded-3xl shadow-lg pt-16 pb-8 px-6 text-center w-56">
+<!-- Image Float -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2">
+<div class="w-32 h-32 rounded-full overflow-hidden shadow-xl">
+<img alt="Veggie tomato mix" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR56sdfdwmhe4P-jcoHPmIEI8zy2pFwOYntX83z-vYvX-xWqwQ_Lzf63U6073XV2aXZdRvDgYqUnnbAy7Z1mjOm9n98O5SgLfc6EJaaNtdlvBBfPYQZcxwyFnMt-W-kSdCBIfKvbvA6SJ6OZcfwCTzYDFjzqAJSfn_o53c3_25lOHiIlV3lll25qkGO32balFZ4tRT96Np0LRV266YZP_8t787auD8WVRi8POEVMJ-SMo7qLvzaItQwqJJaiR6aOckLxzCqs9wgIdY"/>
+</div>
+</div>
+<h3 class="text-black font-bold text-lg leading-tight mt-4">Veggie<br/>tomato mix</h3>
+<p class="text-[#FA4A0C] font-bold mt-4">N1,900</p>
+</div>
+<!-- Bottom Nav Peek -->
+<div class="mt-auto flex justify-between px-4 pb-2">
+<svg class="w-6 h-6 text-[#FA4A0C]" fill="currentColor" viewbox="0 0 24 24"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+<svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<!-- END: HomePeek -->
+</main>
+<!-- END: MainContainer -->
+</body></html>

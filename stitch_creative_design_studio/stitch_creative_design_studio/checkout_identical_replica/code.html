@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Delivery</title>
+<!-- Load Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Font: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff4b2b',
+            background: '#f9f9f9',
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+          },
+          borderRadius: {
+            'eight': '20px', // Matches the rounded-eight theme requirement (approx 20px)
+            'button': '30px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background-color: #f9f9f9;
+      color: #000000;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<style data-purpose="radio-button-styling">
+    /* Custom styling for the orange radio button to match the design system */
+    input[type="radio"]:checked {
+      background-color: #ff4b2b;
+      border-color: #ff4b2b;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    }
+    input[type="radio"] {
+      border: 1px solid #9ca3af;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col max-w-[430px] mx-auto overflow-x-hidden">
+<!-- BEGIN: MainHeader -->
+<header class="pt-12 pb-6 px-10 flex items-center justify-between" data-purpose="page-header">
+<button aria-label="Go back" class="p-2 -ml-2">
+<!-- Chevron Left Icon -->
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="24">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</button>
+<h1 class="text-lg font-semibold text-center flex-1 pr-6">Checkout</h1>
+</header>
+<!-- END: MainHeader -->
+<main class="flex-1 px-10">
+<!-- BEGIN: SectionTitle -->
+<section class="mt-8 mb-10">
+<h2 class="text-3xl font-bold">Delivery</h2>
+</section>
+<!-- END: SectionTitle -->
+<!-- BEGIN: AddressSection -->
+<section class="mb-10" data-purpose="address-details">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold">Address details</h3>
+<button class="text-[#f47b0a] text-sm font-medium">change</button>
+</div>
+<div class="bg-white rounded-eight p-8 shadow-sm" data-purpose="address-card">
+<div class="border-b border-gray-100 pb-2">
+<p class="text-lg font-medium">Marvis Kparobo</p>
+</div>
+<div class="border-b border-gray-100 py-2">
+<p class="text-sm leading-relaxed opacity-70">
+            Km 5 refinery road oppsite re public road, effurun, delta state
+          </p>
+</div>
+<div class="pt-2">
+<p class="text-sm opacity-70">+234 9011039271</p>
+</div>
+</div>
+</section>
+<!-- END: AddressSection -->
+<!-- BEGIN: DeliveryMethodSection -->
+<section class="mb-10" data-purpose="delivery-method">
+<h3 class="text-lg font-semibold mb-4">Delivery method.</h3>
+<div class="bg-white rounded-eight px-8 py-2 shadow-sm" data-purpose="method-card">
+<!-- Door Delivery Option -->
+<label class="flex items-center py-6 cursor-pointer border-b border-gray-100">
+<input checked="" class="text-primary focus:ring-0" name="delivery_method" type="radio"/>
+<span class="ml-4 text-base font-medium">Door delivery</span>
+</label>
+<!-- Pick up Option -->
+<label class="flex items-center py-6 cursor-pointer">
+<input class="text-primary focus:ring-0" name="delivery_method" type="radio"/>
+<span class="ml-4 text-base font-medium">Pick up</span>
+</label>
+</div>
+</section>
+<!-- END: DeliveryMethodSection -->
+<!-- BEGIN: TotalFooter -->
+<section class="mt-auto mb-10" data-purpose="checkout-summary">
+<div class="flex justify-between items-center mb-8">
+<span class="text-lg font-normal">Total</span>
+<span class="text-2xl font-bold">23,000</span>
+</div>
+<button class="w-full bg-primary text-white py-6 rounded-button text-lg font-semibold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+        Proceed to payment
+      </button>
+</section>
+<!-- END: TotalFooter -->
+</main>
+</body></html>

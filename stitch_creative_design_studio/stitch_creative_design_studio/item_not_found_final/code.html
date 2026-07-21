@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Search Results - Item Not Found</title>
+<!-- BEGIN: Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- END: Tailwind CSS CDN -->
+<!-- BEGIN: Custom Font and Configuration -->
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'search-bg': '#F9F9F9',
+            'gray-text': '#9A9A9D',
+            'icon-gray': '#C4C4C4',
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Custom Font and Configuration -->
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<!-- BEGIN: Mobile Container -->
+<!-- Mimics the iOS mobile viewport dimensions and styling from the reference image -->
+<main class="w-[375px] h-[812px] bg-search-bg rounded-[40px] shadow-2xl overflow-hidden flex flex-col relative" data-purpose="mobile-screen-container">
+<!-- BEGIN: Header Navigation -->
+<header class="pt-14 px-8 pb-4 flex items-center" data-purpose="search-header">
+<!-- Back Button -->
+<button aria-label="Go back" class="mr-6 focus:outline-none">
+<svg class="w-6 h-6 text-black" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</button>
+<!-- Search Input State -->
+<div class="flex-1" data-purpose="search-bar">
+<div class="relative flex items-center">
+<input class="w-full bg-transparent border-none p-0 text-lg font-semibold text-black focus:ring-0" readonly="" type="text" value="Spicy chieckns">
+<!-- Cursor cursor simulation -->
+<div class="h-6 w-[1px] bg-black ml-[1px]"></div>
+</div>
+</div>
+</header>
+<!-- END: Header Navigation -->
+<!-- BEGIN: Empty State Content -->
+<div class="flex-1 flex flex-col items-center justify-center px-12" data-purpose="empty-state-body">
+<!-- Magnifying Glass Icon -->
+<div class="mb-8" data-purpose="not-found-icon">
+<svg fill="none" height="122" viewBox="0 0 122 122" width="122" xmlns="http://www.w3.org/2000/svg">
+<circle cx="53" cy="53" r="41" stroke="#C4C4C4" stroke-width="8"></circle>
+<line stroke="#C4C4C4" stroke-linecap="round" stroke-width="8" x1="82.4142" x2="113" y1="83" y2="113.586"></line>
+</svg>
+</div>
+<!-- Text Content -->
+<div class="text-center">
+<h2 class="text-3xl font-bold text-black mb-4">Item not found</h2>
+<p class="text-gray-text text-lg leading-relaxed px-4">
+          Try searching the item with a different keyword.
+        </p>
+</div>
+</div>
+<!-- END: Empty State Content -->
+</main>
+<!-- END: Mobile Container -->
+</body></html>

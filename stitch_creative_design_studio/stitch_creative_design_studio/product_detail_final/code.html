@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Product Detail - Veggie Tomato Mix</title>
+<!-- BEGIN: Tailwind CSS Integration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-orange': '#FF4B12',
+            'soft-gray': '#F5F5F8',
+            'meta-gray': '#9A9A9D',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Tailwind CSS Integration -->
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="layout-adjustments">
+    body {
+      background-color: #000000; /* Matching the background of the snapshot */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .mobile-container {
+      width: 100%;
+      max-width: 414px; /* Approximate iPhone width */
+      height: 896px; /* Approximate iPhone height */
+      background-color: #F5F5F8;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .circular-food-container {
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .scroll-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="antialiased">
+<!-- BEGIN: Main Screen Container -->
+<main class="mobile-container flex flex-col" data-purpose="product-detail-screen">
+<!-- BEGIN: Top Navigation Bar -->
+<header class="flex items-center justify-between px-8 pt-12 pb-6">
+<button aria-label="Go back" class="p-2 -ml-2">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button aria-label="Add to favorites" class="p-2 -mr-2">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</header>
+<!-- END: Top Navigation Bar -->
+<!-- BEGIN: Product Image Gallery -->
+<section class="mt-4 text-center" data-purpose="image-section">
+<div class="circular-food-container flex items-center justify-center bg-white">
+<!-- Using a cropped/simulated version of the provided image to match the circular mask -->
+<img alt="Veggie tomato mix" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl_HspTucGqQHrKyYIHci__JdXW8sMlYcfddcSO5VYFB6hfYRai6heqwhuWitOLXQbA52MMNy164Hi7BOK4GYrAqnAPKc7yJP0OR7k52J_lA4prVB4MkTyj0I06kH-KKWQWFksfjFxkDVIz428Ec5h2yIQyWqq0ik4L941BxAY41X-1sdNYgg9ag0xQYMm2jnUZ2BOObUxb1GRd8NcsbBPe93uGRoED4m0_baFhYB96I5RUk8T2nb27_b2crR4sCCJfPQf-P2Rsg-z">
+</div>
+<!-- Carousel Indicators -->
+<div class="flex justify-center gap-2 mt-8" data-purpose="carousel-pagination">
+<span class="scroll-indicator-dot bg-brand-orange"></span>
+<span class="scroll-indicator-dot bg-gray-300"></span>
+<span class="scroll-indicator-dot bg-gray-300"></span>
+<span class="scroll-indicator-dot bg-gray-300"></span>
+</div>
+</section>
+<!-- END: Product Image Gallery -->
+<!-- BEGIN: Product Info -->
+<section class="px-10 mt-8" data-purpose="product-info">
+<h1 class="text-3xl font-bold text-center text-black mb-2">Veggie tomato mix</h1>
+<p class="text-2xl font-bold text-center text-brand-orange">N1,900</p>
+<div class="mt-8 space-y-6">
+<!-- Delivery Info -->
+<article data-purpose="info-block">
+<h2 class="text-lg font-bold text-black mb-1">Delivery info</h2>
+<p class="text-gray-500 leading-tight">Delivered between monday aug and thursday 20 from 8pm to 91:32 pm</p>
+</article>
+<!-- Return Policy -->
+<article data-purpose="info-block">
+<h2 class="text-lg font-bold text-black mb-1">Return policy</h2>
+<p class="text-gray-500 leading-tight">All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</p>
+</article>
+</div>
+</section>
+<!-- END: Product Info -->
+<!-- BEGIN: Bottom Action Button -->
+<footer class="mt-auto px-10 pb-12" data-purpose="footer-actions">
+<button class="w-full py-5 bg-brand-orange text-white font-bold rounded-full text-lg shadow-lg active:scale-95 transition-transform">
+        Add to cart
+      </button>
+</footer>
+<!-- END: Bottom Action Button -->
+</main>
+<!-- END: Main Screen Container -->
+</body></html>

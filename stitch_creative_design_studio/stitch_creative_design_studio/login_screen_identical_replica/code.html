@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login Screen</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style data-purpose="typography">
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style data-purpose="custom-layout">
+    /* Custom background color matching the image */
+    .bg-custom-gray {
+      background-color: #f5f5f5;
+    }
+    /* Specific orange color used in the UI */
+    .text-custom-orange {
+      color: #FF4B12;
+    }
+    .bg-custom-orange {
+      background-color: #FF4B12;
+    }
+    .border-custom-orange {
+      border-color: #FF4B12;
+    }
+    /* Input border styling - only bottom border */
+    .input-underline {
+      border: none;
+      border-bottom: 1px solid #000000;
+      border-radius: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .input-underline:focus {
+      outline: none;
+      box-shadow: none;
+      border-bottom-width: 2px;
+      border-color: #FF4B12;
+    }
+  </style>
+</head>
+<body class="bg-custom-gray min-h-screen flex flex-col">
+<!-- BEGIN: HeaderCard -->
+<header class="bg-white rounded-b-[40px] pt-16 pb-0 shadow-sm" data-purpose="header-section">
+<!-- Logo Container -->
+<div class="flex flex-col items-center justify-center mb-12">
+<img alt="Chef Hat Logo" class="h-40 object-contain" data-purpose="logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzHLMK1nhO_h1WwNBQCCCy7XJX5Sfr76P7UA8f0QM6gg33M6hnT1zrzN2wgfUlSAZqi30a4k7tiaadhxGzYAry8F3rGFJO4pPKbl49u-B6lgS80znTbkm3_leUEax6mZjgyGm5ZaMSMvUJUzeJ4QBEv7vZmPGopvMRNZmGMKHUOaBWUM6SG0EHfNRXV_RgnpwRIqQCcjPpXqfMKIElVWPy2ZY_Os31PJTekXWLI5e8jo_499gtDucX-LrIOxYPsxx_zS-gYRvC3H5v">
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex justify-around items-center px-8">
+<div class="relative pb-4 flex flex-col items-center w-1/2">
+<span class="text-lg font-semibold text-black">Login</span>
+<div class="absolute bottom-0 h-1 w-full bg-custom-orange rounded-full"></div>
+</div>
+<div class="pb-4 flex flex-col items-center w-1/2">
+<span class="text-lg font-semibold text-gray-400">Sign-up</span>
+</div>
+</nav>
+</header>
+<!-- END: HeaderCard -->
+<!-- BEGIN: LoginForm -->
+<main class="flex-grow px-10 pt-12 pb-10" data-purpose="login-form-container">
+<form action="#" class="space-y-10" method="POST">
+<!-- Email Field -->
+<div class="flex flex-col">
+<label class="text-gray-400 text-sm font-medium mb-1" for="email">Email address</label>
+<input class="input-underline bg-transparent text-lg font-semibold text-black py-2 focus:ring-0" data-purpose="email-input" id="email" name="email" type="email" value="Dosamarvis@gmail.com">
+</div>
+<!-- Password Field -->
+<div class="flex flex-col">
+<label class="text-gray-400 text-sm font-medium mb-1" for="password">Password</label>
+<input class="input-underline bg-transparent text-lg font-semibold text-black py-2 tracking-widest focus:ring-0" data-purpose="password-input" id="password" name="password" type="password" value="********">
+</div>
+<!-- Forgot Password Link -->
+<div class="pt-2">
+<a class="text-custom-orange font-semibold text-base hover:underline" href="#">Forgot passcode?</a>
+</div>
+</form>
+</main>
+<!-- END: LoginForm -->
+<!-- BEGIN: FooterAction -->
+<footer class="px-10 pb-12" data-purpose="form-submission">
+<button class="w-full bg-custom-orange text-white py-5 rounded-[30px] text-lg font-bold shadow-lg active:scale-[0.98] transition-transform" data-purpose="login-button" type="submit">
+      Login
+    </button>
+</footer>
+<!-- END: FooterAction -->
+
+
+</body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Profile</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="typography">
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+    }
+  </style>
+<style data-purpose="custom-styling">
+    .bg-soft-gray {
+      background-color: #F5F5F8;
+    }
+    .text-accent-orange {
+      color: #FA4A0C;
+    }
+    .bg-accent-orange {
+      background-color: #FA4A0C;
+    }
+    .shadow-custom {
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+    }
+  </style>
+</head>
+<body class="bg-soft-gray min-h-screen flex flex-col items-center p-6 text-[#000000]">
+<!-- BEGIN: NavigationHeader -->
+<header class="w-full max-w-md flex flex-col items-start pt-8 pb-10" data-purpose="header">
+<button aria-label="Go back" class="mb-8 p-2">
+<!-- Simple Chevron Left Icon -->
+<svg fill="none" height="20" viewbox="0 0 12 20" width="12" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 2L2 10L10 18" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<h1 class="text-4xl font-bold">My profile</h1>
+</header>
+<!-- END: NavigationHeader -->
+<main class="w-full max-w-md flex-1 flex flex-col gap-6" data-purpose="main-content">
+<!-- BEGIN: PersonalDetailsSection -->
+<section data-purpose="personal-details">
+<div class="flex justify-between items-center mb-4 px-2">
+<h2 class="text-lg font-semibold">Personal details</h2>
+<a class="text-accent-orange text-base font-medium" href="#">change</a>
+</div>
+<!-- Profile Information Card -->
+<div class="bg-white rounded-[20px] p-5 flex items-start shadow-custom" data-purpose="profile-card">
+<!-- Avatar Image -->
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 mr-4">
+<img alt="Marvis Ighedosa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbp-R8suWqVlhUYICQTyeeke6N4eHMy5K3N9fWB7TOgylmLdcLkdGFxvTSOKoJzUPAEN1du8-biRoy1azg4TSB5HgdmU2MxXHm7x5bUHpNuFK5RaEjwh3paThXX2-Cnytkc65VRrAAPtDxhcaWtpf0gdeyXvZ_8l8fS6-f4Vklwy1KOzWVadR9dQnuvoxtXhYiKvffxz8euLKaT2yv0ZhC-hZKEDGypixkRRS5MocO3a9bcMLO8B5MjDqc3wi7xAqMtHa3JAYiW-FP"/>
+</div>
+<!-- Contact Information -->
+<div class="flex-1 flex flex-col overflow-hidden">
+<h3 class="text-xl font-semibold mb-1 truncate">Marvis Ighedosa</h3>
+<div class="border-b border-gray-100 py-2">
+<p class="text-sm text-gray-500 truncate">Dosamarvis@gmail.com</p>
+</div>
+<div class="border-b border-gray-100 py-2">
+<p class="text-sm text-gray-500">+234 9011039271</p>
+</div>
+<div class="pt-2">
+<p class="text-sm text-gray-500 leading-relaxed">
+              No 15 uti street off ovie palace road effurun delta state
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PersonalDetailsSection -->
+<!-- BEGIN: QuickLinksSection -->
+<section class="flex flex-col gap-4" data-purpose="quick-links">
+<!-- Orders Link -->
+<button class="bg-white rounded-[20px] px-6 py-5 flex justify-between items-center shadow-custom w-full">
+<span class="text-lg font-semibold">Orders</span>
+<svg fill="none" height="14" viewbox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13L7 7L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Pending Reviews Link -->
+<button class="bg-white rounded-[20px] px-6 py-5 flex justify-between items-center shadow-custom w-full">
+<span class="text-lg font-semibold">Pending reviews</span>
+<svg fill="none" height="14" viewbox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13L7 7L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- FAQ Link -->
+<button class="bg-white rounded-[20px] px-6 py-5 flex justify-between items-center shadow-custom w-full">
+<span class="text-lg font-semibold">Faq</span>
+<svg fill="none" height="14" viewbox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13L7 7L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Help Link -->
+<button class="bg-white rounded-[20px] px-6 py-5 flex justify-between items-center shadow-custom w-full">
+<span class="text-lg font-semibold">Help</span>
+<svg fill="none" height="14" viewbox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13L7 7L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</section>
+<!-- END: QuickLinksSection -->
+</main>
+<!-- BEGIN: FooterAction -->
+<footer class="w-full max-w-md mt-auto pt-8 pb-4" data-purpose="page-footer">
+<button class="bg-accent-orange text-white w-full py-6 rounded-[30px] text-lg font-semibold shadow-lg transition-transform active:scale-[0.98]">
+      Update
+    </button>
+</footer>
+<!-- END: FooterAction -->
+</body></html>

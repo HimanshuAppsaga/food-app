@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Vibrant Culinaria - Search Results</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-fonts">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F2F2F2; /* Light grey background outside the main container */
+    }
+  </style>
+<style data-purpose="card-layout">
+    /* Custom shadow and overlap for the card images */
+    .food-card {
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.05));
+    }
+    .food-image-container {
+      margin-top: -50px;
+    }
+    .food-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    /* Staggered grid effect similar to the screenshot */
+    .grid-staggered > div:nth-child(even) {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex justify-center">
+<!-- BEGIN: MainContainer -->
+<main class="w-full max-w-[430px] bg-white min-h-screen flex flex-col relative overflow-hidden">
+<!-- BEGIN: Header -->
+<header class="pt-12 px-6 pb-4 flex items-center gap-4 bg-white" data-purpose="navigation-header">
+<!-- Back Arrow -->
+<button aria-label="Go back" class="p-2">
+<svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.25 14.25L6 9L11.25 3.75" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Search Bar -->
+<div class="flex-1 border-b-2 border-black/5 flex items-center pb-1">
+<span class="text-xl font-semibold text-black">Spicy chieckns</span>
+<span class="w-[2px] h-6 bg-black ml-1"></span> <!-- Cursor indicator -->
+</div>
+</header>
+<!-- END: Header -->
+<!-- BEGIN: ContentArea -->
+<section class="flex-1 bg-[#F9F9F9] rounded-t-[40px] px-8 pt-10" data-purpose="search-results-container">
+<!-- Results Headline -->
+<h1 class="text-3xl font-bold text-center text-black mb-20">
+        Found 6 results
+      </h1>
+<!-- BEGIN: Grid -->
+<div class="grid grid-cols-2 gap-x-6 grid-staggered pb-20">
+<!-- Card 1: Veggie tomato mix -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Veggie tomato mix" class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDinOr7j42N0uLXfQ8wd3VoTYSLYI64mgAX3CkkYWKRdvFLFZ8SpbuL0e0ankpdEvA6iQJw7c9a42-j5ogHjdUcGKQL4JrfoAfoY4wAWfFs1_PZcCMAwVGYX7_uwUXP42UN2l7CXxpRxHQAYmRo4q9x4g0UmXyIsPG2VdXT1-DygJzgTvUZNM65xTg9Fbk7E-jF_UpnlBs2FKO9SofCyFCrN3aqIfLqb-8nvo2i0tdWBbVSTC0355BAG3LdvaxoPXVRbXjgYqZW3Cri">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Veggie tomato mix
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+<!-- Card 2: Egg and cucumber -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Egg and cucumber" class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvJO9KOyYDVyzyoxqCFzhIZgYWhZLNoSly1wgoN1EdHOutI3u_HRVsPmJJCdIa39kjZ2Vte2AImd4zFdOSD6W2REdQMmDEaNJVVJAwkHOIV1wkjv8BWkKYshKna5RboXlUNCZ_uLd2615WDhGDc8jmTj87uX9-8qKsBuAJidD2lEPj6xA7GNreqPNGhHU_bMLdKJumZkHWqOeYktuFOim2YnMWBVbuSHumc73nuQ6055WbxOkbvQ0o5fKSyw5NMo_5HyOxa4xxfzvo">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Egg and cucmber...
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+<!-- Card 3: Fried chicken m. -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Fried chicken m." class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB3y5mw_Co6cGXC1Xzuz5VVWrP2WE9_aMsjRuTIR8D9osoOeYOEw7pjzwqWenlpfmh3L8cMu1TJi8T0kIc3qDdX5aY_pNL4jF_ZH9fr-Yoj0zCITyEb8X0aeMAB9gakF1EYmz3DESkpWElojkyhe2bOZdz9Dm_NV3vADPZ2NmkWn79b11I8gFskK2gFiBEWMUGI8_3gQlwuJmGIGkRDKJ43da7AgvH_Z3Mfd33fNBs1EZgqYe9MSQf9gnq6RbXPadG2ZIznBY6lmc2">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Fried chicken m.
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+<!-- Card 4: Moi-moi and ekpa. -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Moi-moi and ekpa." class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZedHFFoE2wG1o4up9G41ZCvcPsW02FjVhjNPSlkdmD09AztZYB_igfAlW2CLuKrXhIVnDfrlbZrvlf_3DZAHOO-LlPg2P3NKIMmI9X0i1b0SXU0KhgCrDG4vvbWc_1HAKKJIcjQrGG2dgZ0TZ8JwEPhV_727xzASbt7bEQ9BNBXD91VLEb1JS6x1mkIuN7ORTHJ0gxwEqBxtsocV_Ss6V2_e5Icsv5xJy5qXXpwPs-jFihVV7CSpFVMXvLg1ZzqMDi-7Q3QvfZQ3T">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Moi-moi and ekpa.
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+<!-- Card 5: Duplicate of Veggie for scroll look -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center opacity-40" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Veggie tomato mix" class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBdwS-yL12ZQkbtUxbRlLVtvCXiWbb0koxw7LYR6ZjqcowpnGAmljJtLFLhKnqktWUSf8VbNXAJPo2M7xUDm24bbq10BDZObZwNcFrW2zWiOmpapG-A19Noi3-DWzGU3RoXXFRXJZcg5apaQbkTRaZoRN8Jy3ENXGED7udY2DNB2lX2sbzGbKIuHWtwWXN_PVGPbjvHxFJwrCeF6Ca1pZuy_WHHCfqtlt0T_zNEDXgUAd9-QbR2r5yUm-d0_yq9a0ayAzJWMJzBCJn">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Veggie tomato mix
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+<!-- Card 6: Duplicate of Egg for scroll look -->
+<div class="food-card bg-white rounded-[30px] p-4 flex flex-col items-center h-[240px] text-center opacity-40" data-purpose="food-item">
+<div class="food-image-container mb-4">
+<img alt="Egg and cucumber" class="food-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApO5pQtAhOUjJrMNFBIeQJR2RWin0JWS0XPmiwLmtGz8zy47tYhBbwdAhHsrr-WJE2WWxvnuWupX4xRpsMaekDqAn8VNs4fkUL3ntdHAp0tyV840oRSQhnMAoA_y-dhFairiUviCVuYscZ3JTY5a5lP5YKljwJ951LLknyjLQxLSXuQ8hi7xHXu_iSUj5qbL4QC3lJris4rNZS8L5m-AatzMiZvFJhTXDrMLbFI7wF2qU0cmjC7PMk7R7Cd0MxOwZ3lAZyilYtRCCg">
+</div>
+<h2 class="text-lg font-bold leading-tight text-black mb-4">
+            Egg and cucmber...
+          </h2>
+<span class="text-orange-600 font-bold text-lg mt-auto pb-2">
+            N1,900
+          </span>
+</div>
+</div>
+<!-- END: Grid -->
+</section>
+<!-- END: ContentArea -->
+</main>
+<!-- END: MainContainer -->
+</body></html>

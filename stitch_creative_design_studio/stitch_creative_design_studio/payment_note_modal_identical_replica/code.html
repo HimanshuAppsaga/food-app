@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Please Note Modal</title>
+<!-- Tailwind CSS CDN with forms and container-queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-colors">
+    /* Custom vibrant orange for the primary action button */
+    .bg-vibrant-orange {
+      background-color: #FF5100;
+    }
+    /* Darker muted background for the overlaid screen */
+    .bg-overlay-dim {
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+    /* Specific styling for the underlying page elements to match the screenshot's dimmed state */
+    .text-dimmed-header {
+      color: #333333;
+    }
+    .bg-bottom-button-dim {
+      background-color: #8B2500; /* Darker/dimmed version of the bottom button */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased min-h-screen flex items-center justify-center">
+<!-- BEGIN: BackgroundScreen -->
+<!-- This represents the Checkout screen behind the modal, dimmed by the overlay -->
+<div class="relative w-full max-w-[430px] h-[932px] bg-gray-400 overflow-hidden shadow-2xl flex flex-col p-6">
+<!-- Header Area -->
+<div class="flex items-center justify-between mt-10 mb-8">
+<div class="p-2 cursor-pointer">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.75 19.5L8.25 12l7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h1 class="text-xl font-semibold">Checkout</h1>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<h2 class="text-4xl font-bold mb-10">Payment</h2>
+<h3 class="text-lg font-bold mb-4">Payment method</h3>
+<!-- Payment Options Container -->
+<div class="bg-white/50 rounded-2xl p-6 space-y-6">
+<!-- Card Option -->
+<div class="flex items-center gap-4">
+<div class="w-5 h-5 rounded-full border-2 border-orange-500 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-orange-500"></div>
+</div>
+<div class="bg-orange-800 p-2 rounded-md">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg>
+</div>
+<span class="text-xl font-medium">Card</span>
+</div>
+<hr class="border-gray-300"/>
+<!-- Bank Transfer Option -->
+<div class="flex items-center gap-4">
+<div class="w-5 h-5 rounded-full border-2 border-gray-400"></div>
+<div class="bg-pink-100 p-2 rounded-md">
+<svg class="w-6 h-6 text-pink-600" fill="currentColor" viewbox="0 0 24 24"><path d="M11.5 1L2 6v2h19V6l-9.5-5zM2 22h19v-3H2v3zm15-11h3v5h-3v-5zm-5 0h3v5h-3v-5zM7 11h3v5H7v-5z"></path></svg>
+</div>
+<span class="text-xl font-medium">Bank account</span>
+</div>
+</div>
+<!-- Total and Bottom Button -->
+<div class="mt-auto mb-8">
+<div class="flex justify-between items-center mb-6">
+<span class="text-xl">Total</span>
+<span class="text-2xl font-bold">23,000</span>
+</div>
+<button class="w-full bg-bottom-button-dim text-gray-300 py-6 rounded-3xl text-xl font-semibold">
+        Proceed to payment
+      </button>
+</div>
+<!-- BEGIN: ModalOverlay -->
+<!-- The semi-transparent overlay that dims the background -->
+<div class="absolute inset-0 bg-overlay-dim flex items-center justify-center p-8 z-50">
+<!-- BEGIN: PleaseNoteModal -->
+<div class="bg-white w-full max-w-sm rounded-[40px] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300" data-purpose="modal-container">
+<!-- Modal Header -->
+<div class="pt-8 pb-4 px-10">
+<h2 class="text-2xl font-bold text-gray-900">Please note</h2>
+</div>
+<hr class="border-gray-100"/>
+<!-- Modal Content -->
+<div class="px-10 py-6 space-y-8">
+<!-- Mainland Section -->
+<div data-purpose="delivery-info">
+<p class="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-1">Delivery to mainland</p>
+<p class="text-xl font-bold text-gray-900">N1000 - N2000</p>
+</div>
+<hr class="border-gray-200"/>
+<!-- Island Section -->
+<div data-purpose="delivery-info">
+<p class="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-1">Delivery to island</p>
+<p class="text-xl font-bold text-gray-900">N2000 - N3000</p>
+</div>
+</div>
+<!-- Modal Actions -->
+<div class="px-10 pb-10 pt-4 flex items-center justify-between">
+<button class="text-gray-500 font-bold text-xl hover:text-gray-700 transition-colors" data-purpose="cancel-button">
+            Cancel
+          </button>
+<button class="bg-vibrant-orange text-white px-10 py-4 rounded-full text-xl font-bold shadow-lg hover:brightness-110 transition-all active:scale-95" data-purpose="proceed-button">
+            Proceed
+          </button>
+</div>
+</div>
+<!-- END: PleaseNoteModal -->
+</div>
+<!-- END: ModalOverlay -->
+</div>
+<!-- END: BackgroundScreen -->
+</body></html>
