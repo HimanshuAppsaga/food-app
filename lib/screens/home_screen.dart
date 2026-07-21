@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 
@@ -25,7 +26,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   IconButton(
                     icon: const Icon(Icons.shopping_cart_outlined, size: 28, color: AppColors.greyMid),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/cart');
+                    },
                   ),
                 ],
               ),
@@ -109,16 +112,22 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildFoodCard(
-                      title: 'Veggie tomato mix',
-                      price: 'N1,900',
-                      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDly_AaAuGultgzu5KylMQfsnBcHNGylVjFrPXTpUMtXALjsDtQQnPkuPvUpRN4_dQrtiMwCJ0tPgO2VCkS_nXJWwK6KL-T2rZPJ7gvBnh2hphXl5h7pU_lsKSnWyJLSff2lGW7laCt5PB3_y3TgtbsxUcKGOcjcxczt737Wv5_GndWp2i1v76jdr3ljJhTSvfMH-UJFWwVyT9EImEHO1nHXJ9lk0SOf7uvHHt7dHnRxSH7z_pA02o-pkPtp_p2zmzrXA05H-WF4Rg4',
+                    GestureDetector(
+                      onTap: () => context.push('/product_detail'),
+                      child: _buildFoodCard(
+                        title: 'Veggie tomato mix',
+                        price: 'N1,900',
+                        imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDly_AaAuGultgzu5KylMQfsnBcHNGylVjFrPXTpUMtXALjsDtQQnPkuPvUpRN4_dQrtiMwCJ0tPgO2VCkS_nXJWwK6KL-T2rZPJ7gvBnh2hphXl5h7pU_lsKSnWyJLSff2lGW7laCt5PB3_y3TgtbsxUcKGOcjcxczt737Wv5_GndWp2i1v76jdr3ljJhTSvfMH-UJFWwVyT9EImEHO1nHXJ9lk0SOf7uvHHt7dHnRxSH7z_pA02o-pkPtp_p2zmzrXA05H-WF4Rg4',
+                      ),
                     ),
                     const SizedBox(width: 24),
-                    _buildFoodCard(
-                      title: 'Spicy fish sauce',
-                      price: 'N2,300',
-                      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBwCbaKAYKJqBDWb7DAZhnskc1Yx_74GgDUBgoTcip1n2S27qRndGPFZO1MqrkAKtBNuJ2TS7jCdPwDnJvaUUyZLuiWN6wZqR0yCsE61VKmdkIlwmpXscW5vLTfbfu4I8seK592F9P9WZNmnr7U9XVBRImOGjLX5dNMfue0T4xMwoR7lo6hvcB-BMmGszrZYIxooF8pqgB-IXPSkCqEhgk_YRBrKAsLx__LbdT-U9pQCgSyqTnkkwNqzRdfmmBgueYXNoGGVscdLSMx',
+                    GestureDetector(
+                      onTap: () => context.push('/product_detail'),
+                      child: _buildFoodCard(
+                        title: 'Spicy fish sauce',
+                        price: 'N2,300',
+                        imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBwCbaKAYKJqBDWb7DAZhnskc1Yx_74GgDUBgoTcip1n2S27qRndGPFZO1MqrkAKtBNuJ2TS7jCdPwDnJvaUUyZLuiWN6wZqR0yCsE61VKmdkIlwmpXscW5vLTfbfu4I8seK592F9P9WZNmnr7U9XVBRImOGjLX5dNMfue0T4xMwoR7lo6hvcB-BMmGszrZYIxooF8pqgB-IXPSkCqEhgk_YRBrKAsLx__LbdT-U9pQCgSyqTnkkwNqzRdfmmBgueYXNoGGVscdLSMx',
+                      ),
                     ),
                   ],
                 ),
@@ -142,11 +151,15 @@ class HomeScreen extends StatelessWidget {
                   ),
                   IconButton(
                     icon: const Icon(Icons.person_outline, size: 30, color: AppColors.greyMid),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/profile');
+                    },
                   ),
                   IconButton(
                     icon: const Icon(Icons.history, size: 30, color: AppColors.greyMid),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/history');
+                    },
                   ),
                 ],
               ),
