@@ -88,7 +88,7 @@ class SplashScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         // Navigate to login screen
-                        // context.go('/login');
+                        context.go('/login');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
