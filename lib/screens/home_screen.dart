@@ -120,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                       child: _buildFoodCard(
                         title: 'Veggie tomato mix',
                         price: 'N1,900',
-                        imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDly_AaAuGultgzu5KylMQfsnBcHNGylVjFrPXTpUMtXALjsDtQQnPkuPvUpRN4_dQrtiMwCJ0tPgO2VCkS_nXJWwK6KL-T2rZPJ7gvBnh2hphXl5h7pU_lsKSnWyJLSff2lGW7laCt5PB3_y3TgtbsxUcKGOcjcxczt737Wv5_GndWp2i1v76jdr3ljJhTSvfMH-UJFWwVyT9EImEHO1nHXJ9lk0SOf7uvHHt7dHnRxSH7z_pA02o-pkPtp_p2zmzrXA05H-WF4Rg4',
+                        imageUrl: 'assets/images/food1.png',
                       ),
                     ),
                     const SizedBox(width: 24),
@@ -129,7 +129,7 @@ class HomeScreen extends StatelessWidget {
                       child: _buildFoodCard(
                         title: 'Spicy fish sauce',
                         price: 'N2,300',
-                        imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBwCbaKAYKJqBDWb7DAZhnskc1Yx_74GgDUBgoTcip1n2S27qRndGPFZO1MqrkAKtBNuJ2TS7jCdPwDnJvaUUyZLuiWN6wZqR0yCsE61VKmdkIlwmpXscW5vLTfbfu4I8seK592F9P9WZNmnr7U9XVBRImOGjLX5dNMfue0T4xMwoR7lo6hvcB-BMmGszrZYIxooF8pqgB-IXPSkCqEhgk_YRBrKAsLx__LbdT-U9pQCgSyqTnkkwNqzRdfmmBgueYXNoGGVscdLSMx',
+                        imageUrl: 'assets/images/food2.png',
                       ),
                     ),
                   ],
@@ -273,7 +273,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
                 image: DecorationImage(
-                  image: NetworkImage(imageUrl),
+                  image: AssetImage(imageUrl),
                   fit: BoxFit.cover,
                 ),
               ),

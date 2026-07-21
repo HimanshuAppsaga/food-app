@@ -95,9 +95,7 @@ class ProfileScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         image: const DecorationImage(
-                          image: NetworkImage(
-                            'https://lh3.googleusercontent.com/aida-public/AB6AXuBbp-R8suWqVlhUYICQTyeeke6N4eHMy5K3N9fWB7TOgylmLdcLkdGFxvTSOKoJzUPAEN1du8-biRoy1azg4TSB5HgdmU2MxXHm7x5bUHpNuFK5RaEjwh3paThXX2-Cnytkc65VRrAAPtDxhcaWtpf0gdeyXvZ_8l8fS6-f4Vklwy1KOzWVadR9dQnuvoxtXhYiKvffxz8euLKaT2yv0ZhC-hZKEDGypixkRRS5MocO3a9bcMLO8B5MjDqc3wi7xAqMtHa3JAYiW-FP'
-                          ),
+                          image: AssetImage('assets/images/avatar.png'),
                           fit: BoxFit.cover,
                         ),
                       ),

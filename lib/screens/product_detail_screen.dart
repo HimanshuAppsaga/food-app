@@ -42,23 +42,16 @@ class ProductDetailScreen extends StatelessWidget {
                   children: [
                     // Product Image Gallery
                     const SizedBox(height: 16),
-                    Container(
-                      width: 240,
-                      height: 240,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 30,
-                            offset: Offset(0, 15),
+                    Center(
+                      child: Container(
+                        width: 240,
+                        height: 240,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/food1.png'),
+                            fit: BoxFit.cover,
                           ),
-                        ],
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                            'https://lh3.googleusercontent.com/aida-public/AB6AXuDl_HspTucGqQHrKyYIHci__JdXW8sMlYcfddcSO5VYFB6hfYRai6heqwhuWitOLXQbA52MMNy164Hi7BOK4GYrAqnAPKc7yJP0OR7k52J_lA4prVB4MkTyj0I06kH-KKWQWFksfjFxkDVIz428Ec5h2yIQyWqq0ik4L941BxAY41X-1sdNYgg9ag0xQYMm2jnUZ2BOObUxb1GRd8NcsbBPe93uGRoED4m0_baFhYB96I5RUk8T2nb27_b2crR4sCCJfPQf-P2Rsg-z'
-                          ),
-                          fit: BoxFit.cover,
                         ),
                       ),
                     ),

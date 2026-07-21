@@ -1,169 +1,177 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../theme/app_colors.dart';
-import '../theme/app_text_styles.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: const Color(0xFFF5F5F5), // Custom gray background
       body: Column(
         children: [
           // Header Card
           Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
+            padding: const EdgeInsets.only(top: 60, bottom: 0),
+            decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
+              borderRadius: const BorderRadius.vertical(
+                bottom: Radius.circular(40),
+              ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 4,
-                  offset: Offset(0, 2),
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 5),
                 ),
               ],
             ),
-            child: SafeArea(
-              bottom: false,
-              child: Column(
-                children: [
-                  const SizedBox(height: 32),
-                  // Logo
-                  Image.network(
-                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBzHLMK1nhO_h1WwNBQCCCy7XJX5Sfr76P7UA8f0QM6gg33M6hnT1zrzN2wgfUlSAZqi30a4k7tiaadhxGzYAry8F3rGFJO4pPKbl49u-B6lgS80znTbkm3_leUEax6mZjgyGm5ZaMSMvUJUzeJ4QBEv7vZmPGopvMRNZmGMKHUOaBWUM6SG0EHfNRXV_RgnpwRIqQCcjPpXqfMKIElVWPy2ZY_Os31PJTekXWLI5e8jo_499gtDucX-LrIOxYPsxx_zS-gYRvC3H5v',
-                    height: 160,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const Icon(Icons.restaurant, size: 100, color: AppColors.brandOrange),
+            child: Column(
+              children: [
+                // Logo Image
+                SizedBox(
+                  height: 160,
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain,
                   ),
-                  const SizedBox(height: 48),
-                  // Tabs
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // Login Tab
-                      Column(
+                ),
+                const SizedBox(height: 32),
+                
+                // Navigation Tabs
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'Login',
-                            style: AppTextStyles.labelLg.copyWith(
+                            style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.w600,
                               color: Colors.black,
                             ),
                           ),
                           const SizedBox(height: 12),
                           Container(
                             height: 4,
-                            width: 120, // Approximate width of the tab indicator
+                            width: 100, // Matching the pill width approx
                             decoration: BoxDecoration(
-                              color: AppColors.brandOrange,
-                              borderRadius: BorderRadius.circular(4),
+                              color: const Color(0xFFFF4B12), // Custom orange
+                              borderRadius: BorderRadius.circular(2),
                             ),
                           ),
                         ],
                       ),
-                      // Sign-up Tab
-                      Column(
+                    ),
+                    Expanded(
+                      child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'Sign-up',
-                            style: AppTextStyles.labelLg.copyWith(
+                            style: TextStyle(
                               fontSize: 18,
-                              color: AppColors.greyMid,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black38,
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          const SizedBox(height: 12),
+                          Container(
+                            height: 4,
+                            color: Colors.transparent,
+                          ),
                         ],
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
           
-          // Form Section
+          // Form Content
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 48),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Email Field
-                  Text(
+                  const Text(
                     'Email address',
-                    style: AppTextStyles.labelSm.copyWith(
-                      color: AppColors.greyMid,
-                      fontWeight: FontWeight.w600,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black45,
                     ),
                   ),
                   TextFormField(
                     initialValue: 'Dosamarvis@gmail.com',
-                    style: AppTextStyles.bodyLg.copyWith(
+                    style: const TextStyle(
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
                     ),
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black12),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.brandOrange, width: 2),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black87),
-                      ),
                       isDense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 8),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black, width: 1),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFFFF4B12), width: 2),
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 40),
                   
                   // Password Field
-                  Text(
+                  const Text(
                     'Password',
-                    style: AppTextStyles.labelSm.copyWith(
-                      color: AppColors.greyMid,
-                      fontWeight: FontWeight.w600,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black45,
                     ),
                   ),
                   TextFormField(
                     initialValue: '********',
                     obscureText: true,
-                    style: AppTextStyles.bodyLg.copyWith(
+                    style: const TextStyle(
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
-                      letterSpacing: 4,
+                      letterSpacing: 4.0,
                     ),
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black12),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.brandOrange, width: 2),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black87),
-                      ),
                       isDense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 8),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black, width: 1),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFFFF4B12), width: 2),
+                      ),
                     ),
                   ),
-                  
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   
                   // Forgot Password
-                  Text(
-                    'Forgot passcode?',
-                    style: AppTextStyles.labelLg.copyWith(
-                      color: AppColors.brandOrange,
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: const Text(
+                      'Forgot passcode?',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFFF4B12), // Custom orange
+                      ),
                     ),
                   ),
                 ],
@@ -171,9 +179,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           
-          // Login Button
+          // Footer Button
           Padding(
-            padding: const EdgeInsets.all(40.0),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 48),
             child: SizedBox(
               width: double.infinity,
               height: 70,
@@ -182,18 +190,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   context.go('/home');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.brandOrange,
+                  backgroundColor: const Color(0xFFFF4B12),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(35),
                   ),
                   elevation: 5,
                 ),
-                child: Text(
+                child: const Text(
                   'Login',
-                  style: AppTextStyles.labelLg.copyWith(
-                    color: Colors.white,
-                    fontSize: 20,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -204,4 +212,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
