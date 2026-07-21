@@ -178,7 +178,9 @@ class _LoginScreenState extends State<LoginScreen> {
               width: double.infinity,
               height: 70,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.go('/home');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.brandOrange,
                   foregroundColor: Colors.white,
